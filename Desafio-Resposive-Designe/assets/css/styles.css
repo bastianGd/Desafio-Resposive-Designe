@@ -147,14 +147,15 @@ footer {
   padding: 1rem;
   min-width: 100%;
 }
+
 /* Versión Desktop */
-@media (min-width: 992px) {
+@media (min-width: 572px) {
   body {
     grid-template-areas:
       "header filtro filtro filtro"
       "header main main main"
       "footer main main main";
-    grid-template-columns: 300px auto;
+    grid-template-columns: 300px auto auto auto;
     grid-template-rows: 7rem 1fr 5rem;
   }
 
@@ -164,39 +165,40 @@ footer {
     justify-content: start;
   }
 
-  .menu-lista {
-    position: fixed;
-    top: 150px;
-    display: flex;
-    list-style: none;
-    font-size: larger;
-    flex-direction: column;
-    line-height: 50px;
-    padding: 0;
-  }
-
-  .icono-menu {
-    display: none;
-  }
-
   .logo__header {
     justify-content: center;
     align-items: center;
+    width: 19rem;
   }
 
-  .logo__header img{
+  .logo__header img {
     height: 10rem;
     position: fixed;
-    top: 5px;
+    top: 0;
     width: 10rem;
   }
 
   .logo__header h1 {
     height: 10rem;
     position: fixed;
-    top: 125px;
+    top: 145px;
     width: 10rem;
     left: 90px;
+  }
+
+  .icono-menu {
+    display: none;
+  }
+
+  .menu-lista {
+    position: fixed;
+    top: 200px;
+    display: flex;
+    list-style: none;
+    font-size: larger;
+    flex-direction: column;
+    line-height: 50px;
+    padding: 0;
   }
 
   .principal-producto {
@@ -221,17 +223,5 @@ footer {
   .card__producto img {
     object-fit: fill;
     height: 100%;
-  }
-
-}
-
-@media (min-width: 576px) {
-  body {
-    grid-template-areas:
-      "header header header header"
-      "filtro main main main"
-      "footer footer footer footer";
-    grid-template-columns: 300px auto;
-    grid-template-rows: 7rem 1fr 5rem;
   }
 }
